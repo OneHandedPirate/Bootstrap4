@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contacts</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a onclick="login()">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -81,7 +81,7 @@
     
     <!-- Reservation Modal -->
     <div id="reserve" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
@@ -168,7 +168,7 @@
                         <img src="img/logo.png" alt="Logo" class="img-fluid">
                     </div>
                     <div class="col-sm-7 align-self-center">
-                        <a class="btn btn-warning btn-block btn-sm" data-toggle="modal" data-target="#reserve">Reserve Table</a>
+                        <a class="btn btn-warning btn-block btn-sm" onclick="reserve()">Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -330,6 +330,16 @@
                 }
             })
         })
+    </script>
+    <script>
+        function login() {
+            $('#loginModal').modal('show');
+        }
+    </script>
+    <script>
+        function reserve() {
+            $('#reserve').modal('show');
+        }
     </script>
     <!-- <script>
         $(document).ready(function() {
